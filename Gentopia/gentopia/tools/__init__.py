@@ -14,6 +14,7 @@ from .code_interpreter import PythonCodeInterpreter
 from .file_operation import WriteFile, ReadFile
 from .duckduckgo import DuckDuckGo
 from .pdf_reader import PDFReader
+from .image_analyze import ImageAnalysisTool
 
 
 def load_tools(name: str) -> BaseTool:
@@ -46,6 +47,7 @@ def load_tools(name: str) -> BaseTool:
         "search_cite_paper": SearchCitePaper,
         "google_search": GoogleSearch,
         "pdf_reader": PDFReader,
+        "image_analyzer": ImageAnalysisTool,
     }
     if name not in name2tool:
         raise NotImplementedError

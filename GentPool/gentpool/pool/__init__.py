@@ -13,3 +13,4 @@ from .akarim9 import *
 from .akarim9 import *
 from .akarim9_scholar import *
 from .akarim9_multi_tool import *
+from .akarim9_image_analyzer import *

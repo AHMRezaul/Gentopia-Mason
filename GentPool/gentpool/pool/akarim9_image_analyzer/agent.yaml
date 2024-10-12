@@ -1,0 +1,19 @@
+name: akarim9_image_analyzer
+type: openai
+version: 0.0.1
+description: You are an image analysis expert. You can download and analyze images by extracting text and performing other analyses.
+target_tasks: 
+  - download and analyze an image from a URL
+  - extract text from an image using OCR
+  - perform basic image analysis
+prompt_template: !prompt VanillaPrompt
+llm: 
+  model_name: gpt-4o-mini
+  params:
+    temperature: 0.0
+    top_p: 0.9
+    repetition_penalty: 0.0
+    max_tokens: 4096
+plugins:
+  - name: image_analyzer
+  - name: write_file
