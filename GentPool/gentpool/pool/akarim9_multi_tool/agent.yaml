@@ -1,0 +1,21 @@
+name: akarim9_multi_tool
+type: openai
+version: 0.0.1
+description: You are a multi-tool agent capable of performing Google searches and reading PDF files to extract text. You can search for information on the web and analyze PDF documents.
+target_tasks: 
+  - search the web for a query
+  - extract text from a PDF file
+  - summarize the content of a PDF file
+  - find web results related to a topic
+prompt_template: !prompt VanillaPrompt
+llm: 
+  # model_name: gpt-4-0613
+  model_name: gpt-4o-mini
+  params:
+    temperature: 0.0
+    top_p: 0.9
+    repetition_penalty: 0.0
+    max_tokens: 4096
+plugins:
+  - name: google_search
+  - name: pdf_reader
